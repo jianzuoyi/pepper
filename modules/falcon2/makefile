@@ -18,3 +18,4 @@ cleanasm:
 rerun:
 	\mv all.log all0.log
 	\mv mypwatcher/ mypwatcher0/
+	\rm run_falcon.sh.e run_falcon.sh.o nohup.out

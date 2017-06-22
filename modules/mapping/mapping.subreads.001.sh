@@ -1,0 +1,1 @@
+/its1/GB_BT2/jianzuoyi/biosoft/speedseq/bin/bwa mem -t 10 -x pacbio -R '@RG\tID:001\tSM:001' -M /its1/GB_BT2/jianzuoyi/workspace/pepper/data/Reference/BwaIndex/Capsicum.annuum.L_Zunla-1_Release_2.0.fasta /its1/GB_BT2/jianzuoyi/workspace/pepper/output/subreads.all-001/subreads.all-001.untrimmed.fa > /its1/GB_BT2/jianzuoyi/workspace/pepper/output/mapping/subreads.001.mapping.sam

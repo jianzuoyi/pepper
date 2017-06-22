@@ -1,0 +1,1 @@
+/opt/bio/proovread/bin/SeqChunker -s 6G -o /its1/GB_BT2/jianzuoyi/workspace/pepper/output/split/Pacbio/pepper.subreads.%02d.fq /its1/GB_BT2/jianzuoyi/workspace/pepper/output/merge/pepper.subreads.merged.fq

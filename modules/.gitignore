@@ -1,0 +1,9 @@
+*.fa
+*.sh.e*
+*.sh.o*
+*_done
+*.dot
+*~
+*.log
+*output/
+*shell/

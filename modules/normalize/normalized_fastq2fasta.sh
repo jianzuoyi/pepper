@@ -1,0 +1,1 @@
+/opt/bio/userApps/bin/fastqToFa /its1/GB_BT2/jianzuoyi/workspace/pepper/output/normalize/SRR653470-SRR653476.normalized.fq /its1/GB_BT2/jianzuoyi/workspace/pepper/output/normalize/SRR653470-SRR653476.normalized.fa

@@ -1,0 +1,1 @@
+qsubm -l vf=6G,p=30,h=compute-0-4 run_sparc.sh

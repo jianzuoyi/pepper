@@ -7,11 +7,11 @@ export PATH=/opt/bio/augustus-3.2.3/scripts/:$PATH
 export AUGUSTUS_CONFIG_PATH=/its1/GB_BT2/jianzuoyi/workspace/pepper/modules/biosoft/busco/config/augustus/config/
 
 python /its1/GB_BT2/jianzuoyi/workspace/pepper/modules/biosoft/busco/scripts/run_BUSCO.py \
--i /its1/GB_BT2/jianzuoyi/workspace/pepper/modules/falcon/versions/v1/2-asm-falcon_5kb/p_ctg.fa \
--o p_ctg \
+-i /its1/GB_BT2/jianzuoyi/workspace/pepper/data/Capsicum.annuum.L_Zunla-1_Release_2.0.fasta \
+-o Zunla \
 -l /its1/GB_BT2/jianzuoyi/workspace/pepper/modules/biosoft/busco/OrthoDB/embryophyta_odb9 \
 -m genome \
--c 24 \
+-c 16 \
 -f \
 -r
 

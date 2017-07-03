@@ -1,0 +1,14 @@
+#!/bin/bash
+set -vex
+
+while(true)
+do
+    tasks=$(squeue | grep genebang)
+    if [[ -z $tasks ]] && [[ ! -f "../2-asm-falcon/p_ctg.fa" ]]; then
+        mkdir -p qwatch_dir
+        tmpDir=$(mktemp -d ./qwatch_dir/XXXXXX)
+        mv all.log mypwatcher run_falcon.sh.e run_falcon.sh.o $tmpDir
+        yhbatch -p free run_falcon.sh
+    fi
+    sleep 10m
+done

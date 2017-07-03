@@ -17,6 +17,6 @@ cleanasm:
 	\rm -rf 2-*/ mypwatcher/ *.log
 rerun:
 	\mkdir -p versions
-	\mv all.log versions/all.log
-	\mv mypwatcher/ versions/mypwatcher/
+	\mv all.log versions/all0.log
+	\mv mypwatcher/ versions/mypwatcher0
 	\rm run_falcon.sh.e run_falcon.sh.o nohup.out

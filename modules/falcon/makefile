@@ -10,7 +10,7 @@ run:
 test:
 	./check.py
 cleanall:
-	\rm -rf 0-*/ 1-*/ 2-*/ mypwatcher/ *.log
+	\rm -rf 0-*/ 1-*/ 2-*/ mypwatcher/ *.log *.sh.e* *.sh.o* nohup.out
 cleanovl:
 	\rm -rf 1-*/ 2-*/ mypwatcher/ *.log
 cleanasm:

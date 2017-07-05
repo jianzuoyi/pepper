@@ -2,10 +2,11 @@
 set -vex
 
 # --------------------------------------------------------------------------------------
-# Author:Zuoyi Jian
-# Email: jianzuoyi@qq.com
+# Author:      Zuoyi Jian
+# Email:       jianzuoyi@qq.com
 # Description: Assessment of genome assembly using BUSCO system
-# Date: 2017-07-05
+# Date:        2017-07-05
+# Version:     1.0
 # --------------------------------------------------------------------------------------
 export BUSCO_CONFIG_FILE=/its1/GB_BT2/jianzuoyi/workspace/pepper/modules/busco/config.ini
 export PATH=/opt/bio/augustus-3.2.3/bin/:$PATH

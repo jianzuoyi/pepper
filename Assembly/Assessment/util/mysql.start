@@ -1,0 +1,2 @@
+#!/bin/bash
+nohup mysqld_safe --defaults-file=/its1/GB_BT2/jianzuoyi/biosoft/anaconda/mysql-test/var/my.cnf --user=root > mysqld_safe.nohup &

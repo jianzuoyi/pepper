@@ -1,0 +1,5 @@
+{
+  "stats.run.assembly": "/its1/GB_BT2/jianzuoyi/projects/pepper/Assembly/Assessment/data/NGS/human_g1k_v37_20_42220611-42542245.fasta",
+  "stats.run.stat_sh": "/its1/GB_BT2/jianzuoyi/biosoft/anaconda/bin/stats.sh",
+  "stats.run.outdir": "/its1/GB_BT2/jianzuoyi/projects/pepper/Assembly/Assessment"
+}

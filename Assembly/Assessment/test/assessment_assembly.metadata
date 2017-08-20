@@ -1,0 +1,30 @@
+{
+  "submittedFiles": {
+    "workflow": "import \"busco.wdl\"\nimport \"stats.wdl\"\n\nworkflow Assessment_assembly {\n  String assembly  \n  \n  call stats.run as stats { input: assembly = assembly }\n  call busco.run as busco { input: assembly = assembly }\n}\n\n",
+    "workflowType": "WDL",
+    "options": "{\n\n}",
+    "inputs": "{\n  \"Assessment_assembly.assembly\": \"/its1/GB_BT2/jianzuoyi/projects/pepper/modules/falcon/versions/v1/2-asm-falcon_5kb/p_ctg.fa\",\n  \"Assessment_assembly.busco.augustus_bin\": \"/its1/GB_BT2/jianzuoyi/biosoft/anaconda/bin\",\n  \"Assessment_assembly.busco.augustus_config_path\": \"/its1/GB_BT2/jianzuoyi/biosoft/anaconda/pkgs/augustus-3.2.2-boost1.61_3/config\",\n  \"Assessment_assembly.busco.augustus_script\": \"/its1/GB_BT2/jianzuoyi/biosoft/anaconda/bin\",\n  \"Assessment_assembly.busco.busco_config_file\": \"/its1/GB_BT2/jianzuoyi/projects/pepper/Assembly/Assessment/config.ini\",\n  \"Assessment_assembly.busco.cpu\": \"8\",\n  \"Assessment_assembly.busco.memory_gb\": \"32\",\n  \"Assessment_assembly.busco.OrthoDB\": \"/its1/GB_BT2/jianzuoyi/database/busco/embryophyta_odb9\",\n  \"Assessment_assembly.busco.outbase\": \"test\",\n  \"Assessment_assembly.busco.python\": \"/its1/GB_BT2/jianzuoyi/biosoft/anaconda/envs/busco/bin/python\",\n  \"Assessment_assembly.busco.runBUSCO\": \"/its1/GB_BT2/jianzuoyi/biosoft/busco/scripts/run_BUSCO.py\",\n  \"Assessment_assembly.outdir\": \"/its1/GB_BT2/jianzuoyi/projects/pepper/Assembly/Assessment\",\n  \"Assessment_assembly.stats.outdir\": \"/its1/GB_BT2/jianzuoyi/projects/pepper/Assembly/Assessment\",\n  \"Assessment_assembly.stats.stat_sh\": \"/its1/GB_BT2/jianzuoyi/biosoft/anaconda/bin/stats.sh\"\n}\n",
+    "labels": "{}"
+  },
+  "calls": {
+
+  },
+  "outputs": {
+
+  },
+  "id": "e0596d48-ae9f-45d2-baa4-21663fd11124",
+  "inputs": {
+
+  },
+  "submission": "2017-08-20T18:47:03.808+08:00",
+  "status": "Failed",
+  "failures": [{
+    "causedBy": [{
+      "causedBy": [],
+      "message": "Unable to load namespace from workflow: Failed to import workflow busco.wdl.:\nFile not found /its1/GB_BT2/jianzuoyi/projects/pepper/Assembly/Assessment/test/busco.wdl"
+    }],
+    "message": "Workflow input processing failed"
+  }],
+  "end": "2017-08-20T18:47:03.945+08:00",
+  "start": "2017-08-20T18:47:03.848+08:00"
+}

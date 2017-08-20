@@ -1,0 +1,88 @@
+{
+  "workflowName": "stats",
+  "submittedFiles": {
+    "workflow": "workflow stats {\n  call run\n  \n  output {\n    File output_stats = run.output_stats\n  }\n}\n\ntask run {\n  String assembly\n  String outdir\n  String stat_sh\n  String asm_name = basename(assembly)\n  command {\n    ${stat_sh} ${assembly} > ${asm_name}.stats\n  }\n  output {\n    File output_stats = \"${asm_name}.stats\"\n  }\n  runtime {\n    memory: \"1 GB\"\n    cpu: \"1\"\n    jobname: \"run_stats\"\n  }\n}\n",
+    "workflowType": "WDL",
+    "options": "{\n  \"write_to_cache\": false,\n  \"read_from_cache\": false,\n  \"backend\": \"SGE\"\n}",
+    "inputs": "{\n  \"stats.run.assembly\": \"/its1/GB_BT2/jianzuoyi/projects/pepper/Assembly/Assessment/test/data/NGS/human_g1k_v37_20_42220611-42542245.fasta\",\n  \"stats.run.stat_sh\": \"/its1/GB_BT2/jianzuoyi/biosoft/anaconda/bin/stats.sh\",\n  \"stats.run.outdir\": \"/its1/GB_BT2/jianzuoyi/projects/pepper/Assembly/Assessment\"\n}\n",
+    "labels": "{}"
+  },
+  "calls": {
+    "stats.run": [{
+      "executionStatus": "Done",
+      "stdout": "/its1/GB_BT2/jianzuoyi/projects/pepper/Assembly/Assessment/test/cromwell-executions/stats/acf531d9-fe80-4b5a-8114-994ded89ae50/call-run/execution/stdout",
+      "backendStatus": "Done",
+      "shardIndex": -1,
+      "outputs": {
+        "output_stats": "/its1/GB_BT2/jianzuoyi/projects/pepper/Assembly/Assessment/test/cromwell-executions/stats/acf531d9-fe80-4b5a-8114-994ded89ae50/call-run/execution/human_g1k_v37_20_42220611-42542245.fasta.stats"
+      },
+      "runtimeAttributes": {
+        "failOnStderr": "false",
+        "continueOnReturnCode": "0",
+        "cpu": "1",
+        "jobname": "run_stats",
+        "memory": "1 GB"
+      },
+      "callCaching": {
+        "allowResultReuse": false,
+        "effectiveCallCachingMode": "CallCachingOff"
+      },
+      "inputs": {
+        "outdir": "/its1/GB_BT2/jianzuoyi/projects/pepper/Assembly/Assessment",
+        "assembly": "/its1/GB_BT2/jianzuoyi/projects/pepper/Assembly/Assessment/test/data/NGS/human_g1k_v37_20_42220611-42542245.fasta",
+        "stat_sh": "/its1/GB_BT2/jianzuoyi/biosoft/anaconda/bin/stats.sh",
+        "asm_name": "human_g1k_v37_20_42220611-42542245.fasta"
+      },
+      "returnCode": 0,
+      "jobId": "89033",
+      "backend": "SGE",
+      "end": "2017-08-20T19:07:56.878+08:00",
+      "stderr": "/its1/GB_BT2/jianzuoyi/projects/pepper/Assembly/Assessment/test/cromwell-executions/stats/acf531d9-fe80-4b5a-8114-994ded89ae50/call-run/execution/stderr",
+      "callRoot": "/its1/GB_BT2/jianzuoyi/projects/pepper/Assembly/Assessment/test/cromwell-executions/stats/acf531d9-fe80-4b5a-8114-994ded89ae50/call-run",
+      "attempt": 1,
+      "executionEvents": [{
+        "startTime": "2017-08-20T19:07:56.875+08:00",
+        "description": "UpdatingJobStore",
+        "endTime": "2017-08-20T19:07:56.878+08:00"
+      }, {
+        "startTime": "2017-08-20T19:07:42.914+08:00",
+        "description": "RequestingExecutionToken",
+        "endTime": "2017-08-20T19:07:42.930+08:00"
+      }, {
+        "startTime": "2017-08-20T19:07:42.897+08:00",
+        "description": "Pending",
+        "endTime": "2017-08-20T19:07:42.914+08:00"
+      }, {
+        "startTime": "2017-08-20T19:07:42.930+08:00",
+        "description": "WaitingForOutputStore",
+        "endTime": "2017-08-20T19:07:42.939+08:00"
+      }, {
+        "startTime": "2017-08-20T19:07:42.939+08:00",
+        "description": "PreparingJob",
+        "endTime": "2017-08-20T19:07:43.013+08:00"
+      }, {
+        "startTime": "2017-08-20T19:07:43.013+08:00",
+        "description": "RunningJob",
+        "endTime": "2017-08-20T19:07:56.875+08:00"
+      }],
+      "start": "2017-08-20T19:07:42.878+08:00"
+    }]
+  },
+  "outputs": {
+    "stats.output_stats": "/its1/GB_BT2/jianzuoyi/projects/pepper/Assembly/Assessment/test/cromwell-executions/stats/acf531d9-fe80-4b5a-8114-994ded89ae50/call-run/execution/human_g1k_v37_20_42220611-42542245.fasta.stats"
+  },
+  "workflowRoot": "/its1/GB_BT2/jianzuoyi/projects/pepper/Assembly/Assessment/test/cromwell-executions/stats/acf531d9-fe80-4b5a-8114-994ded89ae50",
+  "id": "acf531d9-fe80-4b5a-8114-994ded89ae50",
+  "inputs": {
+    "stats.run.stat_sh": "/its1/GB_BT2/jianzuoyi/biosoft/anaconda/bin/stats.sh",
+    "stats.run.assembly": "/its1/GB_BT2/jianzuoyi/projects/pepper/Assembly/Assessment/test/data/NGS/human_g1k_v37_20_42220611-42542245.fasta",
+    "stats.run.outdir": "/its1/GB_BT2/jianzuoyi/projects/pepper/Assembly/Assessment"
+  },
+  "labels": {
+    "cromwell-workflow-id": "cromwell-acf531d9-fe80-4b5a-8114-994ded89ae50"
+  },
+  "submission": "2017-08-20T19:07:41.177+08:00",
+  "status": "Succeeded",
+  "end": "2017-08-20T19:07:57.067+08:00",
+  "start": "2017-08-20T19:07:41.231+08:00"
+}

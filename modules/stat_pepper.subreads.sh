@@ -1,1 +1,0 @@
-/its1/GB_BT2/jianzuoyi/biosoft/bbmap/stats.sh /its1/GB_BT2/jianzuoyi/workspace/pepper/output/merge/pepper.subreads.merged.fq > /its1/GB_BT2/jianzuoyi/workspace/pepper/output/merge/pepper.subreads.merged.fq.stats

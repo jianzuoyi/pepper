@@ -8,18 +8,20 @@ set -vex
 # Date:        2017-07-05
 # Version:     1.0
 # --------------------------------------------------------------------------------------
-export BUSCO_CONFIG_FILE=/its1/GB_BT2/jianzuoyi/workspace/pepper/modules/busco/config.ini
-export PATH=/opt/bio/augustus-3.2.3/bin/:$PATH
-export PATH=/opt/bio/augustus-3.2.3/scripts/:$PATH
-export AUGUSTUS_CONFIG_PATH=/its1/GB_BT2/jianzuoyi/workspace/pepper/modules/biosoft/busco/config/augustus/config/
-OrthoDB=/its1/GB_BT2/jianzuoyi/workspace/pepper/modules/biosoft/busco/OrthoDB/embryophyta_odb9
-BUSCO=/its1/GB_BT2/jianzuoyi/workspace/pepper/modules/biosoft/busco/scripts/run_BUSCO.py
+export BUSCO_CONFIG_FILE=/its1/GB_BT2/jianzuoyi/projects/pepper/modules/busco/config.ini
+#export PATH=/opt/bio/augustus-3.2.3/bin/:$PATH
+#export PATH=/opt/bio/augustus-3.2.3/scripts/:$PATH
+export PATH=/its1/GB_BT2/jianzuoyi/biosoft/anaconda/bin:$PATH
+export AUGUSTUS_CONFIG_PATH=/its1/GB_BT2/jianzuoyi/biosoft/anaconda/pkgs/augustus-3.2.2-boost1.61_3/config
+OrthoDB=/its1/GB_BT2/jianzuoyi/database/busco/embryophyta_odb9
+#BUSCO=/its1/GB_BT2/jianzuoyi/biosoft/anaconda/bin/busco
+BUSCO=/its1/GB_BT2/jianzuoyi/biosoft/busco/scripts/run_BUSCO.py
 # --------------------------------------------------------------------------------------
-GENOME=/its1/GB_BT1/xutong/QingKe/AssemblyResult/Hulless_barley.scaffold.fa
-OUTBASE=barley.scaffold
-THREADS=20
+GENOME=/its1/GB_BT2/jianzuoyi/projects/pepper/modules/falcon/versions/v1/2-asm-falcon_5kb/p_ctg.fa
+OUTBASE=p_ctg_5kb
+THREADS=16
 # --------------------------------------------------------------------------------------
-python $BUSCO \
+$BUSCO \
 -i $GENOME \
 -o $OUTBASE \
 -l $OrthoDB \
@@ -27,4 +29,4 @@ python $BUSCO \
 -c $THREADS \
 -f \
 -r
-touch buso_pipeline_${OUTBASE}_done
+touch run_busco_${OUTBASE}_done

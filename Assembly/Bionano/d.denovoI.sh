@@ -1,0 +1,13 @@
+python /its1/GB_BT2/jianzuoyi/biosoft/bionano/tools/pipeline/1.0/Pipeline/1.0/pipelineCL.py \
+-u \
+-T 96 \
+-f 0.2 \
+-i 0 \
+-b /its1/GB_BT2/jianzuoyi/workspace/Pepper/Assembly/Bionano/pepper.merged.filter.SNR.len.bnx \
+-l /its1/GB_BT2/jianzuoyi/workspace/Pepper/Assembly/Bionano/denovoI \
+-t /its1/GB_BT2/jianzuoyi/biosoft/bionano/tools/pipeline/1.0/RefAligner/1.0/ \
+-a /its1/GB_BT2/jianzuoyi/biosoft/bionano/tools/pipeline/1.0/RefAligner/1.0/optArguments_haplotype_saphyr.xml \
+-V 0 \
+-A \
+-z \
+-m
